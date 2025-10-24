@@ -92,8 +92,8 @@ def main():
     print(f"Data loaded successfully. Total songs after cleaning: {len(df)}")
 
     for song, artist in QUERY_SONGS:
-            query_idx, query_row = find_track(df, song, artist)
-            print(f"\nrecommendations for: '{query_row['track_name']}' by {query_row['artist(s)_name']}")
+        query_idx, query_row = find_track(df, song, artist)
+        print(f"\nrecommendations for: '{query_row['track_name']}' by {query_row['artist(s)_name']}")
        
 
         rec_indices, rec_scores = get_recommendations(X_scaled, query_idx, k=TOP_K)
